@@ -49,7 +49,7 @@ $(document).ready(function () {
     setTimeout(function() {
         $loaderBg.addClass('fadeOut animated hide');
         $contentSlideshow.addClass('fadeIn animated');
-    }, 2500);
+    }, 2000);
 
     $box.on('mouseenter', function () {
         $box.removeClass('on');
@@ -77,9 +77,8 @@ $(document).ready(function () {
 
     $body.vegas({
         slides: [
-            { src: "../img/b2.jpg" },
-            { src: "../img/b1.jpg" },
-            { src: "../img/b3.jpg" }
+            { src: "../img/condatos.jpg" },
+            { src: "../img/condatos2.jpg" }
         ],
         animation: 'kenburns'
     });
@@ -88,7 +87,7 @@ $(document).ready(function () {
     // Content slideshow
 
     $contentSlideshow.css({
-       'padding-top' : ($windowHeight - $contentSlideshowHeight) / 2
+       'padding-top' : ($windowHeight - $contentSlideshowHeight) / 3.5
     });
 
 
@@ -99,8 +98,8 @@ $(document).ready(function () {
     countdown();
 
     function countdown() {
-        // ATTENTION - Ianuary is 0, February is 1 ......
-        var launch_date = new Date(Date.UTC(2017, 3, 1, 0, 0));
+        // ATTENTION - january is 0, February is 1 ......
+        var launch_date = new Date(Date.UTC(2017, 7, 23, 0, 0));
         var days;
         var hours;
         var minutes;
@@ -128,10 +127,10 @@ $(document).ready(function () {
         rest <= 0 ? days = hours = minutes = seconds = '00' : setTimeout(countdown, 1000);
 
         ctd.innerHTML =
-            '<li><div><span class="h3">' + days + '</span><br> day' + (days > 1 ? 's' : '') + '</div></li>' +
-            '<li><div><span class="h3">' + hours + '</span><br> hour' + (hours > 1 ? 's' : '') + '</div></li>' +
-            '<li><div><span class="h3">' + minutes + '</span><br> minute' + (minutes > 1 ? 's' : '') + '</div></li>' +
-            '<li><div><span class="h3">' + seconds + '</span><br> second' + (seconds > 1 ? 's' : '') + '</div></li>';
+            '<li><div><span class="h3">' + days + '</span><br> dia' + (days > 1 ? 's' : '') + '</div></li>' +
+            '<li><div><span class="h3">' + hours + '</span><br> hora' + (hours > 1 ? 's' : '') + '</div></li>' +
+            '<li><div><span class="h3">' + minutes + '</span><br> minuto' + (minutes > 1 ? 's' : '') + '</div></li>' +
+            '<li><div><span class="h3">' + seconds + '</span><br> segundo' + (seconds > 1 ? 's' : '') + '</div></li>';
     }
 
 
