@@ -174,19 +174,6 @@ body {
     line-height: 1;
 }
 
-.copyright {
-    position: absolute;
-    right: 15px;
-    z-index: 999;
-    bottom: 5px;
-    font-size: 10px;
-    opacity: 0.9;
-}
-.copyright a:hover,
-.copyright a:focus {
-    color: #40b733;
-    text-decoration: none;
-}
 .social {
     position: absolute;
     z-index: 5;
@@ -1421,8 +1408,7 @@ body {
 }
 
 @media all and (max-height: 480px) {
-    .social,
-    .copyright {
+    .social {
         display: none;
     }
 }

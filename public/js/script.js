@@ -352,8 +352,8 @@ $(document).ready(function() {
     function initializeMap() {
         var map_canvas = document.getElementById('map_canvas');
         var map_options = {
-            center: new google.maps.LatLng(4.6000415, -74.0739466),
-            zoom: 17,
+            center: new google.maps.LatLng(9.935743, -84.072618),
+            zoom: 18,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var mapPin = " http://www.google.com/mapfiles/marker.png";
