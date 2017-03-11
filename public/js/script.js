@@ -1,20 +1,20 @@
 'use strict';
 /*
-*
-* 1. Variables
-* 2. General
-* 3. Menu
-* 4. Slideshow
-* 5. Countdown
-* 6. Particles
-* 7. Counter
-* 8. Lightbox
-*
-*
-* */
+ *
+ * 1. Variables
+ * 2. General
+ * 3. Menu
+ * 4. Slideshow
+ * 5. Countdown
+ * 6. Particles
+ * 7. Counter
+ * 8. Lightbox
+ *
+ *
+ * */
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     // Variables
 
@@ -37,21 +37,21 @@ $(document).ready(function () {
         $contentSlideshowHeight = $contentSlideshow.height(),
         $contentSlideshowWidth = $contentSlideshow.width();
 
-    $window.on('resize', function () {
-        $content.css('transition-delay','0s');
+    $window.on('resize', function() {
+        $content.css('transition-delay', '0s');
         $windowHeight = $window.height();
         $contentSlideshowHeight = $contentSlideshow.height();
         $contentSlideshow.css({
-            'padding-top' : ($windowHeight - $contentSlideshowHeight) / 2
+            'padding-top': ($windowHeight - $contentSlideshowHeight) / 2
         });
     });
 
     setTimeout(function() {
         $loaderBg.addClass('fadeOut animated hide');
         $contentSlideshow.addClass('fadeIn animated');
-    }, 2000);
+    }, 1500);
 
-    $box.on('mouseenter', function () {
+    $box.on('mouseenter', function() {
         $box.removeClass('on');
         $(this).addClass('on')
     });
@@ -59,7 +59,7 @@ $(document).ready(function () {
     // -----------------------------------------------------------------------------------------------------
     // MENU
 
-    $menu.on('click', function () {
+    $menu.on('click', function() {
         $menuIcon.toggleClass('on');
         $menuBtn.toggleClass('on');
         $loadingBar.toggleClass('on');
@@ -76,9 +76,11 @@ $(document).ready(function () {
     // Slideshow
 
     $body.vegas({
+        animationDuration: 4000,
+        transitionDuration: 2000,
         slides: [
-            { src: "../img/condatos.jpg" },
-            { src: "../img/condatos2.jpg" }
+            { src: "img/condatos.jpg" },
+            { src: "img/condatos2.jpg" }
         ],
         animation: 'kenburns'
     });
@@ -87,7 +89,7 @@ $(document).ready(function () {
     // Content slideshow
 
     $contentSlideshow.css({
-       'padding-top' : ($windowHeight - $contentSlideshowHeight) / 3.5
+        'padding-top': ($windowHeight - $contentSlideshowHeight) / 3.5
     });
 
 
@@ -137,126 +139,124 @@ $(document).ready(function () {
     // -----------------------------------------------------------------------------------------------------
     // PARTICLES
 
-    particlesJS(
-        {
-            "particles": {
-                "number": {
-                    "value": 20,
-                    "density": {
-                        "enable": true,
-                        "value_area": 1000
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "triangle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    },
-                    "image": {
-                        "src": "img/github.svg",
-                        "width": 100,
-                        "height": 100
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 10,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
+    particlesJS({
+        "particles": {
+            "number": {
+                "value": 20,
+                "density": {
                     "enable": true,
-                    "distance": 173.61248115909999,
-                    "color": "#ffffff",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 5,
-                    "direction": "top-right",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": true,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
+                    "value_area": 1000
                 }
             },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": false,
-                        "mode": "repulse"
-                    },
-                    "onclick": {
-                        "enable": false,
-                        "mode": "push"
-                    },
-                    "resize": true
+            "color": {
+                "value": "#ffffff"
+            },
+            "shape": {
+                "type": "triangle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
                 },
-                "modes": {
-                    "grab": {
-                        "distance": 1006.993006993007,
-                        "line_linked": {
-                            "opacity": 0
-                        }
-                    },
-                    "bubble": {
-                        "distance": 400,
-                        "size": 40,
-                        "duration": 2,
-                        "opacity": 8,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
                 }
             },
-            "retina_detect": true
-        }
-    );
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 10,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 173.61248115909999,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 5,
+                "direction": "top-right",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": true,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": false,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": false,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 1006.993006993007,
+                    "line_linked": {
+                        "opacity": 0
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
 
     // -----------------------------------------------------------------------------------------------------
     // COUNTER
 
-    $.fn.countTo = function (options) {
+    $.fn.countTo = function(options) {
         options = options || {};
 
-        return $(this).each(function () {
+        return $(this).each(function() {
             // set options for current element
             var settings = $.extend({}, $.fn.countTo.defaults, {
                 from: $(this).data('from'),
@@ -326,13 +326,14 @@ $(document).ready(function () {
         onUpdate: null, // callback method for every time the element is updated
         onComplete: null // callback method for when the element finishes updating
     };
+
     function formatter(value, settings) {
         return value.toFixed(settings.decimals);
     }
 
     // custom formatting example
     $count_number.data('countToOptions', {
-        formatter: function (value, options) {
+        formatter: function(value, options) {
             return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
         }
     });
@@ -347,6 +348,22 @@ $(document).ready(function () {
     }
 
 
+    // // MAP
+    function initializeMap() {
+        var map_canvas = document.getElementById('map_canvas');
+        var map_options = {
+            center: new google.maps.LatLng(4.6000415, -74.0739466),
+            zoom: 17,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var mapPin = " http://www.google.com/mapfiles/marker.png";
+        var Marker = new google.maps.Marker({
+            position: map_options.center,
+        });
+        var map = new google.maps.Map(map_canvas, map_options)
+        Marker.setMap(map);
+    }
+    google.maps.event.addDomListener(window, 'load', initializeMap);
     // -----------------------------------------------------------------------------------------------------
     // Lightbox gallery
 

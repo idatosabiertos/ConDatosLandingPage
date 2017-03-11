@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Shortcut Icon" href="img/favicon.gif" type="image/x-icon">
+    <title>PROXIMAMENTE!</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/vegas.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- ============== LOADER ============== -->
+    <div class="loader-bg"><span class="loader"><span class="loader-inner"></span></span>
+        <div class="loading">Cargando</div>
+    </div>
+    <!-- ============== PARTICLES ============== -->
+    <div id="particles-js"></div>
+    <!-- ============== WRAPPER ============== -->
+    <div class="wrapper">
+        <!-- ============== OVERLAY ============== -->
+        <div class="overlay"></div>
+        <!-- ============== MENU ============== -->
+        <div class="brand"><a href="http://condatos.org/" class="color-white">CONDATOS</a></div>
+        <!-- ============== MENU ============== -->
+        <div class="menu">
+            <button class="menu-icon"></button>
+            <button class="menu-txt btn color-white"><strong>Más Información</strong></button>
+        </div>
+        <!-- ============== CONTENT ============== -->
+        <div class="content">
+            <section>
+                <h4 class="more-info-title">RESERVÁ LA FECHA! 23, 24 Y 25 DE AGOSTO</h4>
+            </section>
+            <section class="about">
+                <h5 class="title">Acerca del Evento</h5>
+                <p>
+                    La Conferencia Regional de Datos Abiertos para Latinoamérica y el Caribe - Condatos, es el evento regional más importante de datos abiertos, que reúne a representantes de gobierno, sociedad civil, expertos y personas interesadas de los países de América Latina y el Caribe, en espacios de interacción para enriquecer el debate en torno a la política, innovación y retos públicos de los datos abiertos en la Región.
+                </p>
+            </section>
+            <section class="counters">
+                <div class="counter check">
+                    <div class="counter col-xs-6 col-sm-4">
+                        <img src="http://laaris.com/coming-soon-02/img/startup.svg" class="img-responsive" alt="">
+                        <div class="timer count-title count-number" data-to="100" data-speed="1500"> </div>
+                        <span><b>Projectos</b></span>
+                    </div>
+                    <div class="counter col-xs-6 col-sm-4">
+                        <img src="http://laaris.com/coming-soon-02/img/coffee-cup.svg" class="img-responsive" alt="">
+                        <div class="timer count-title count-number" data-to="1870" data-speed="1500"></div>
+                        <span><b>Tazas de café</b></span>
+                    </div>
+                    <div class="counter col-xs-6 col-sm-4 end">
+                        <img src="http://laaris.com/coming-soon-02/img/boy-broad-smile.svg" class="img-responsive" alt="">
+                        <div class="timer count-title count-number" data-to="250" data-speed="1500"></div>
+                        <span><b>Participantes</b></span>
+                    </div>
+                </div>
+            </section>
+            <section class="services">
+                <h5 class="title">Ubicación</h5>
+                <div id="map_canvas"></div>
+            </section>
+            <section class="clients">
+                <h5 class="title">Organizadores</h5>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/org1.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/org2.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/org3.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/org4.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/org5.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/org6.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/org7.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/org8.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/org9.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/org10.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/org11.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/org12.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/org13.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/org14.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/org15.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/org16.png" class="img-responsive" alt="">
+                </div>
+                <div class="space"></div>
+                <div class="testimonial">
+                    <div class="testimonials" id="testimonials">
+                        <div class="carousel" data-ride="carousel" id="quote-carousel">
+                            <!-- Carousel Slides / Quotes -->
+                            <div class="carousel-inner">
+                                <!-- Quote 1 -->
+                                <div class="item col-sm-12 active">
+                                    <blockquote>
+                                        Lorem ipsum dolor sit amet. Accusantium aliquam architecto beatae dolorem, enim error eveniet harum iste molestias neque nisi placeat possimus quaerat quam unde.
+                                        <br><span class="author">- Andrew Adams, Google Inc</span>
+                                    </blockquote>
+                                </div>
+                                <!-- Quote 2 -->
+                                <div class="item col-sm-12">
+                                    <blockquote>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam archi tecto beatae dolorem, enim error eveniet harum iste molestias neque nisi placeat.
+                                        <br><span class="author">- Jhon Smith, Facebook Inc</span>
+                                    </blockquote>
+                                </div>
+                                <!-- Quote 3 -->
+                                <div class="item col-sm-12">
+                                    <blockquote>
+                                        Lorem ipsum dolor sit amet, adipisicing elit. Accusantium aliquam architecto beatae dolorem, enim error eveniet harum iste molestias neque nisi placeat possimus.
+                                        <br><span class="author">- Bob Smith, Fitbit</span>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <!-- Bottom Carousel Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="img/c2.jpg" alt="">
+                                </li>
+                                <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="img/c3.jpg" alt="">
+                                </li>
+                                <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="img/c2.jpg" alt="">
+                                </li>
+                            </ol>
+                            <!-- Carousel Buttons Next/Prev -->
+                            <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                            <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="clients">
+                <h5 class="title">Patrocinadores</h5>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/pat1.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/pat2.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/pat3.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/pat4.png" class="img-responsive" alt="">
+                </div>
+                <div class="col-xs-4 col-md-3 client">
+                    <img src="img/pat5.png" class="img-responsive" alt="">
+                </div>
+            </section>
+            <section class="contact">
+                <h5 class="title">Contacto</h5>
+                <div class="space"></div>
+                <form id="contact-form" method="post" action="#contact.php">
+                    <div class="messages"></div>
+                    <div class="controls">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                    <input id="form_name" type="text" name="name" class="form-control" aria-describedby="basic-addon1" placeholder="Nombre *" required="required" data-error="Ingrese su nombre.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon2"><i class="fa fa-user"></i></span>
+                                    <input id="form_lastname" type="text" name="surname" class="form-control" aria-describedby="basic-addon2" placeholder="Apellido *" required="required" data-error="Ingrese su apellido.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon3"><i class="fa fa-envelope-o"></i></span>
+                                    <input id="form_email" type="email" name="email" class="form-control" aria-describedby="basic-addon3" placeholder="Email *" required="required" data-error="Ingrese un email valido.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon4"><i class="fa fa-phone"></i></span>
+                                    <input id="form_phone" type="tel" name="phone" class="form-control" aria-describedby="basic-addon4" placeholder="Telefono">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon5"><i class="fa fa-pencil"></i></span>
+                                    <textarea id="form_message" name="message" class="form-control" aria-describedby="basic-addon5" placeholder="Mensaje" rows="4" required="required" data-error="Ingrese un mensaje."></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="submit" class="btn btn-success btn-send color-pink" value="Enviar">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <!-- ============== SLIDESHOW ============== -->
+        <div class="content-slideshow">
+            <div class="space"></div>
+            <div class="space"></div>
+            <!-- ============== COUNTDOWN ============== -->
+            <div class="countdown">
+                <h2 class="text-uppercase"><span class="color-pink">Empieza </span><span class="color-white"> en:</span></h2>
+                <ul id="countdown"></ul>
+            </div>
+            <!-- Newsletter Form -->
+            <form class="subscribe" action="#" method="POST">
+                <div class="form-group">
+                    <div class="controls">
+                        <!-- Field  -->
+                        <input type="text" id="mail-sub" name="email" placeholder="Ingrese su email" onfocus="this.placeholder = 'Ingrese su email'" onblur="this.placeholder = 'Ingrese su email'" class="form-control email" />
+                        <!-- Button -->
+                        <button class="submit" type="submit" value="submit">
+                            Notificarme
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <!-- /. Newsletter Form -->
+        </div>
+    </div>
+    <!-- ============== SOCIAL ============== -->
+    <div class="social">
+        <ul class="list-inline">
+            <li><a href="https://www.facebook.com/ConDatos" class="color-white"><i class="fa fa-facebook-official"></i></a></li>
+            <li><a href="https://twitter.com/condatoslatam" class="color-white"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/condatoslatam/" class="color-white"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCXI67CC17-nNbPTfjfFbSBg" class="color-white"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+    </div>
+    <!-- ============== COPYRIGHT ============== -->
+    <div class="copyright color-white">
+        Copyright © 2017 <a href="http://idatosabiertos.org/" class="color-white">idatosabiertos.org</a>
+    </div>
+    <!-- ============== LATERAL LOADING BAR ============== -->
+    <div id="loading-bar" data-scale="1"></div>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs&sensor=false"></script>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/particles.min.js"></script>
+    <script type="text/javascript" src="js/gallery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/vegas.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <script type="text/javascript" src="js/respond.min.js"></script>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <script type="text/javascript" src="js/validator.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/contact.js"></script>
+</body>
+
+</html>
