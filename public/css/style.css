@@ -1563,4 +1563,6 @@ body {
 #mailsub-error {
     position: absolute;
     left: 23px;
+    font-size: 20px;
+    font-weight: bold;
 }
