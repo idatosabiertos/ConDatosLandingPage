@@ -8,6 +8,7 @@
     <title>PROXIMAMENTE!</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/loading.min.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/vegas.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -30,12 +31,12 @@
         <!-- ============== MENU ============== -->
         <div class="menu">
             <button class="menu-icon"></button>
-            <button class="menu-txt btn color-white"><strong>Más Información</strong></button>
+            <button class="menu-txt info-btn  btn color-white"><strong>Más Información</strong></button>
         </div>
         <!-- ============== CONTENT ============== -->
         <div class="content">
             <section>
-                <h4 class="more-info-title">RESERVÁ LA FECHA! 23, 24 Y 25 DE AGOSTO.</h4>
+                <h4 class="more-info-title color-pink">RESERVÁ LA FECHA! 23, 24 Y 25 DE AGOSTO.</h4>
             </section>
             <section class="about">
                 <h5 class="title">Acerca del Evento</h5>
@@ -50,23 +51,21 @@
             <section class="contact">
                 <h5 class="title">Contacto</h5>
                 <div class="space"></div>
-                <form id="contact-form" method="post">
+                <form id="contact-form" name="contact-form" method="post">
                     <div class="messages"></div>
                     <div class="controls">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                    <input id="form_name" type="text" name="name" class="form-control" aria-describedby="basic-addon1" placeholder="Nombre *" required="required" data-error="Ingrese su nombre.">
+                                    <input id="form_name" type="text" name="form_name" class="form-control" aria-describedby="basic-addon1" placeholder="Nombre *" required>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
                             <div class="col-md-6">
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon3"><i class="fa fa-envelope-o"></i></span>
-                                    <input id="form_email" type="email" name="email" class="form-control" aria-describedby="basic-addon3" placeholder="Email *" required="required" data-error="Ingrese un email valido.">
+                                    <input id="form_email" type="email" name="form_email" class="form-control" aria-describedby="basic-addon3" placeholder="Email *" required>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
@@ -75,7 +74,7 @@
                             <div class="col-md-12">
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon5"><i class="fa fa-pencil"></i></span>
-                                    <textarea id="form_message" name="message" class="form-control" aria-describedby="basic-addon5" placeholder="Mensaje" rows="4" required="required" data-error="Ingrese un mensaje."></textarea>
+                                    <textarea id="form_message" name="form_message" class="form-control" aria-describedby="basic-addon5" placeholder="Mensaje *" rows="4" required></textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
@@ -98,14 +97,14 @@
             </div>
             <div class="space"></div>
             <!-- Newsletter Form -->
-            <form id="suscribe-form" class="subscribe"  method="post">
+            <form id="suscribe-form" name="suscribe-form" class="subscribe" method="post">
                 <div class="messages"></div>
                 <div class="form-group">
                     <div class="controls">
                         <!-- Field  -->
-                        <input type="text" id="mail-sub" name="email" placeholder="Ingrese su email" onfocus="this.placeholder = 'Ingrese su email'" onblur="this.placeholder = 'Ingrese su email'" class="form-control email" />
+                        <input type="text" id="mailsub" name="mailsub" required placeholder="Ingrese su email" onfocus="this.placeholder = 'Ingrese su email'" onblur="this.placeholder = 'Ingrese su email'" class="form-control email" />
                         <!-- Button -->
-                        <button class="submit" type="submit" value="submit">
+                        <button class="notify submit" type="submit" value="submit">
                             Notificarme
                         </button>
                     </div>
@@ -127,13 +126,14 @@
     <div id="loading-bar" data-scale="1"></div>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs&sensor=false"></script>
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.loading.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="js/particles.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/vegas.min.js"></script>
     <script type="text/javascript" src="js/modernizr.js"></script>
     <script type="text/javascript" src="js/respond.min.js"></script>
     <script type="text/javascript" src="js/html5shiv.js"></script>
-    <script type="text/javascript" src="js/validator.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/contact.js"></script>
 </body>

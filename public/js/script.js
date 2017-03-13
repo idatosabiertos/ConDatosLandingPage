@@ -14,7 +14,7 @@
  * */
 
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     // Variables
 
@@ -37,7 +37,7 @@ $(document).ready(function() {
         $contentSlideshowHeight = $contentSlideshow.height(),
         $contentSlideshowWidth = $contentSlideshow.width();
 
-    $window.on('resize', function() {
+    $window.on('resize', function () {
         $content.css('transition-delay', '0s');
         $windowHeight = $window.height();
         $contentSlideshowHeight = $contentSlideshow.height();
@@ -46,26 +46,55 @@ $(document).ready(function() {
         });
     });
 
-    setTimeout(function() {
+    setTimeout(function () {
         $loaderBg.addClass('fadeOut animated hide');
         $contentSlideshow.addClass('fadeIn animated');
+        initializeMap();
     }, 1500);
 
-    $box.on('mouseenter', function() {
+    $box.on('mouseenter', function () {
         $box.removeClass('on');
         $(this).addClass('on')
+    });
+
+    $('#contact-form').validate({
+        rules: {
+            form_name: { required: true },
+            form_email: { required: true, email: true },
+            form_message: { required: true }
+        },
+        messages: {
+            form_name: "Ingrese su nombre",
+            form_email: {
+                required: "Ingrese su email",
+                email: "Ingrese un email v&aacute;lido"
+            },
+            form_message: "Ingrese un mensaje"
+        }
+    });
+    $('#suscribe-form').validate({
+        rules: {
+            mailsub: { required: true, email: true }
+        },
+        messages: {
+            mailsub: {
+                required: "Ingrese su email",
+                email: "Ingrese un email v&aacute;lido"
+            }
+
+        }
     });
 
     // -----------------------------------------------------------------------------------------------------
     // MENU
 
-    $menu.on('click', function() {
+    $menu.on('click', function () {
         $menuIcon.toggleClass('on');
         $menuBtn.toggleClass('on');
         $loadingBar.toggleClass('on');
         $content.toggleClass('on');
         $contentSlideshow.toggleClass('on');
-        setTimeout(function() {
+        setTimeout(function () {
             // start all the timers
             $timer.each(count);
             $menuBtn.toggleClass('hide');
@@ -253,10 +282,10 @@ $(document).ready(function() {
     // -----------------------------------------------------------------------------------------------------
     // COUNTER
 
-    $.fn.countTo = function(options) {
+    $.fn.countTo = function (options) {
         options = options || {};
 
-        return $(this).each(function() {
+        return $(this).each(function () {
             // set options for current element
             var settings = $.extend({}, $.fn.countTo.defaults, {
                 from: $(this).data('from'),
@@ -294,7 +323,7 @@ $(document).ready(function() {
 
                 render(value);
 
-                if (typeof(settings.onUpdate) == 'function') {
+                if (typeof (settings.onUpdate) == 'function') {
                     settings.onUpdate.call(self, value);
                 }
 
@@ -304,7 +333,7 @@ $(document).ready(function() {
                     clearInterval(data.interval);
                     value = settings.to;
 
-                    if (typeof(settings.onComplete) == 'function') {
+                    if (typeof (settings.onComplete) == 'function') {
                         settings.onComplete.call(self, value);
                     }
                 }
@@ -333,7 +362,7 @@ $(document).ready(function() {
 
     // custom formatting example
     $count_number.data('countToOptions', {
-        formatter: function(value, options) {
+        formatter: function (value, options) {
             return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
         }
     });
