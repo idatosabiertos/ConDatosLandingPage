@@ -1532,8 +1532,14 @@ body {
     }
 
     .subscribe .submit {
-        bottom: -60px;
+        bottom: -80px;
         right: 25%;
+    }
+    #mailsub-error {
+        position: absolute;
+        left: 13px !important;
+        font-size: 14px !important;
+        font-weight: bold;
     }
 }
 
