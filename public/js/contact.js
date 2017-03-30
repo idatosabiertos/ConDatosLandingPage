@@ -1,6 +1,6 @@
 $(function () {
 
-    var url = "http://condatos.azurewebsites.net/api/email";
+    var url = "/api/email";
 
     function showSuccess(message, xhr, form) {
         var messageAlert = 'alert-' + (xhr && xhr.status == 200 ? 'success' : 'danger');
